@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shenhua.lib.slidinglayout.SlidingLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:background_view="@layout/slidingview_bg"
+    app:sliding_mode="top"
+    app:top_max="200dp">
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff" />
+
+</com.shenhua.lib.slidinglayout.SlidingLayout>
