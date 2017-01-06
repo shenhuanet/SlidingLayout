@@ -1,4 +1,8 @@
 # SlidingLayout
+[ ![jCenter](https://img.shields.io/badge/version-1.0.0-yellowgreen.svg) ](https://dl.bintray.com/shenhuanetos/maven/com/shenhua/libs/slidingLayout/1.0/)
+[![Build Status](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://bintray.com/shenhuanetos/maven/slidingLayout)
+[![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
+
 SlidingLayout is a Android platform View control, it can help you achieve a similar WeChat web browsing drop-down function, it can also help you achieve a similar UITableView iOS drop-down bounce jelly effect.
 
 SlidingLayout is perfectly compatible with all View components of the Android native libraries and compatible libraries,including RecyclerView,ListView,ScrollView,and WebView.
@@ -7,35 +11,25 @@ Project site： <https://github.com/shenhuanet/SlidingLayout>.
 
 Demo: <https://github.com/shenhuanet/SlidingLayout/tree/master/apk/demo.apk>.
 
-## Preview：
-
+## ScreenShot：
+### On ScrollView
 ![p1](https://raw.githubusercontent.com/shenhuanet/SlidingLayout/master/screenshot/scrollview.gif)
 
+### On ListView
 ![p2](https://raw.githubusercontent.com/shenhuanet/SlidingLayout/master/screenshot/listview.gif)
 
+### On RecyclerView
 ![p3](https://raw.githubusercontent.com/shenhuanet/SlidingLayout/master/screenshot/recyclerview.gif)
 
+### On WebView
 ![p4](https://raw.githubusercontent.com/shenhuanet/SlidingLayout/master/screenshot/webview.gif)
 
-## Import project
-
-**Gradle dependency:**
-``` groovy
-compile 'shenhua.lib:sldinglayout:1.0.0'
+## how to use:
 ```
-
-or
-
-**Maven dependency:**
-``` xml
-<dependency>
-  <groupId>shenhua.lib</groupId>
-  <artifactId>sldinglayout</artifactId>
-  <version>1.0.0</version>
-</dependency>
+dependencies {
+    compile 'com.shenhua.libs:slidinglayout:1.0'
+}
 ```
-
-**Dependency:**
 
 If you project need to support API V9,you should add this：
 
@@ -113,16 +107,4 @@ Sets the background of the control
  * shenhua - <shenhuanet@126.com>
 
 ## License
-Copyright 2016 Shenhua
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-   http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+Copyright 2016 Shenhua  ShenhueNet OS.

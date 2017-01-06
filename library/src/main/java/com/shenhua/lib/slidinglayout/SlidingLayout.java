@@ -18,11 +18,11 @@ import android.widget.FrameLayout;
  */
 public class SlidingLayout extends FrameLayout {
 
-    private int mTouchSlop;//系统允许最小的滑动判断值
+    private int mTouchSlop;// The system allows for minimum sliding values
     private int mBackgroundViewLayoutId = 0;
 
-    private View mBackgroundView;//背景View
-    private View mTargetView;//正面View
+    private View mBackgroundView;//backgroundView
+    private View mTargetView;//targetView
 
     private boolean mIsBeingDragged;
     private float mInitialDownY;
@@ -30,7 +30,7 @@ public class SlidingLayout extends FrameLayout {
     private float mLastMotionY;
     private int mActivePointerId = INVALID_POINTER;
 
-    private float mSlidingOffset = 0.5F;// 滑动阻力系数
+    private float mSlidingOffset = 0.5F;// Sliding resistance coefficient
 
     private static final int RESET_DURATION = 200;
     private static final int SMOOTH_DURATION = 1000;
@@ -137,7 +137,7 @@ public class SlidingLayout extends FrameLayout {
                 }
 
                 if (y > mInitialDownY) {
-                    //判断是否是上拉操作
+                    // To determine whether it is on the pull operation
                     final float yDiff = y - mInitialDownY;
                     if (yDiff > mTouchSlop && !mIsBeingDragged && !canChildScrollUp()) {
                         mInitialMotionY = mInitialDownY + mTouchSlop;
@@ -145,7 +145,7 @@ public class SlidingLayout extends FrameLayout {
                         mIsBeingDragged = true;
                     }
                 } else if (y < mInitialDownY) {
-                    //判断是否是下拉操作
+                    // To determine whether the drop-down operation
                     final float yDiff = mInitialDownY - y;
                     if (yDiff > mTouchSlop && !mIsBeingDragged && !canChildScrollDown()) {
                         mInitialMotionY = mInitialDownY + mTouchSlop;
@@ -232,15 +232,15 @@ public class SlidingLayout extends FrameLayout {
                         break;
                     case SLIDING_MODE_TOP:
                         if (movemment >= 0 || distance > 0) {
-                            //向下滑动
+                            // down
                             if (delta < 0) {
-                                //如果还往上滑，就让它归零
+                                // If it goes up, let it go to zero
                                 delta = 0;
                             }
                             if (mSlidingTopMaxDistance == SLIDING_DISTANCE_UNDEFINED || delta < mSlidingTopMaxDistance) {
-                                //滑动范围内 for todo
+                                //Sliding range for todo
                             } else {
-                                //超过滑动范围
+                                //Over sliding range
                                 delta = mSlidingTopMaxDistance;
                             }
                             getInstrument().slidingByDelta(mTargetView, delta);
@@ -248,9 +248,9 @@ public class SlidingLayout extends FrameLayout {
                         break;
                     case SLIDING_MODE_BOTTOM:
                         if (movemment <= 0 || distance < 0) {
-                            //向上滑动
+                            //up
                             if (delta > 0) {
-                                //如果还往下滑，就让它归零
+                                //If it goes down, let it go to zero
                                 delta = 0;
                             }
                             getInstrument().slidingByDelta(mTargetView, delta);
@@ -286,18 +286,18 @@ public class SlidingLayout extends FrameLayout {
     }
 
     /**
-     * 获得滑动阻力系数
+     * Sliding resistance coefficient
      *
-     * @return 滑动阻力系数
+     * @return resistance coefficient
      */
     public float getSlidingOffset() {
         return this.mSlidingOffset;
     }
 
     /**
-     * 设置滑动阻力系数
+     * set resistance coefficient
      *
-     * @param slidingOffset 滑动阻力系数
+     * @param slidingOffset resistance coefficient
      */
     public void setSlidingOffset(float slidingOffset) {
         this.mSlidingOffset = slidingOffset;
@@ -383,7 +383,7 @@ public class SlidingLayout extends FrameLayout {
     }
 
     public interface SlidingListener {
-        // 不能操作繁重的任务在这里
+        // Can't handle heavy tasks here
         void onSlidingOffset(View view, float delta);
 
         void onSlidingStateChange(View view, int state);

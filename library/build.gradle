@@ -30,5 +30,23 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.nineoldandroids:library:2.4.0'
 }
-
-//apply from: 'https://raw.githubusercontent.com/shenhuanet/Gradle-Publish/master/bintray.gradle'
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'slidingLayout'
+    bintrayGroupName = 'shenhuanetos'
+    publishedGroupId = 'com.shenhua.libs'
+    libraryName = 'slidinglayout'
+    artifact = 'slidinglayout'
+    libraryDescription = 'SlidingLayout is a Android platform View control, it can help you achieve a similar WeChat web browsing drop-down function, it can also help you achieve a similar UITableView iOS drop-down bounce jelly effect.'
+    siteUrl = 'https://github.com/shenhuanet/SlidingLayout'
+    gitUrl = 'https://github.com/shenhuanet/SlidingLayout.git'
+    libraryVersion = '1.0'
+    developerId = 'shenhua'
+    developerName = 'shenhua'
+    developerEmail = 'shenhuanet@126.com'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+apply from: 'https://raw.githubusercontent.com/shenhuanet/JCenter/master/install.gradle'
+apply from: 'https://raw.githubusercontent.com/shenhuanet/JCenter/master/bintray.gradle'
