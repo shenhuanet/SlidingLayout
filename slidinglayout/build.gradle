@@ -8,7 +8,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 24
         versionCode 1
-        versionName "1.0"
+        versionName "1.1"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -40,7 +40,7 @@ ext {
     libraryDescription = 'SlidingLayout is a Android platform View control, it can help you achieve a similar WeChat web browsing drop-down function, it can also help you achieve a similar UITableView iOS drop-down bounce jelly effect.'
     siteUrl = 'https://github.com/shenhuanet/SlidingLayout'
     gitUrl = 'https://github.com/shenhuanet/SlidingLayout.git'
-    libraryVersion = '1.0'
+    libraryVersion = '1.1'
     developerId = 'shenhua'
     developerName = 'shenhua'
     developerEmail = 'shenhuanet@126.com'

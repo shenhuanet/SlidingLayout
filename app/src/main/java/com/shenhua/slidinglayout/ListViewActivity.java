@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 
-import com.shenhua.lib.slidinglayout.SlidingLayout;
+import com.shenhua.libs.slidinglayout.SlidingLayout;
 
 /**
  * Created by shenhua on 11/11/2016.

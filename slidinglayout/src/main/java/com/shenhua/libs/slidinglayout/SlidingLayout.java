@@ -1,4 +1,4 @@
-package com.shenhua.lib.slidinglayout;
+package com.shenhua.libs.slidinglayout;
 
 import android.content.Context;
 import android.content.res.TypedArray;

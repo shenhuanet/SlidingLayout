@@ -1,4 +1,4 @@
-package com.shenhua.lib.slidinglayout;
+package com.shenhua.libs.slidinglayout;
 
 import org.junit.Test;
 
